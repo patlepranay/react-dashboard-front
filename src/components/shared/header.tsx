@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" p-2">
+    <header className=" p-2 dark:bg-slate-950 bg-white">
       <nav className="flex justify-between pb-2 ">
         <div className="flex gap-2 items-center">
           <Sunrise />

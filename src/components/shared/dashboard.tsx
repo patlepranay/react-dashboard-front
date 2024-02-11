@@ -10,13 +10,19 @@ const Dashboard = () => {
       <div className="flex items-center h-[500px] w-full">
         <BarChartComp />
         <LineChartComp />
-        <div className="flex flex-col items-center h-full w-full">
-          {/* <DomainRadarChart data={data} /> */}
-          <PieChartComp />
-          <PieChartComp />
-        </div>
       </div>
       <div className="h-[300px] w-full">
+        <div className="flex  items-center justify-center h-full w-full">
+          <div className="h-full w-full">
+            <PieChartComp />
+          </div>
+          <div className="flex-col h-full w-full  ">
+        
+            <PieChartComp />
+          </div>
+
+         
+        </div>
         <ComposedChartComp />
       </div>
     </div>
