@@ -13,6 +13,7 @@ const BarChartComp = () => {
       colors={["blue", "pink"]}
       //   valueFormatter={dataFormatter}
       yAxisWidth={65}
+      showAnimation={true}
     />
   );
 };
