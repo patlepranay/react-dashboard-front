@@ -38,7 +38,7 @@ export const useDataStore = create<Store>()((set) => {
         const data = await res.json();
         set({ data: data });
       } catch (error) {
-        console.log(error);
+       
         set({ data: [] });
       } finally {
         set({ isLoading: false });

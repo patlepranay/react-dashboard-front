@@ -1,4 +1,5 @@
 import { SunIcon, Sunrise } from "lucide-react";
+import { Card } from "../ui/card";
 
 const Sidebar = () => {
   const data = [
@@ -16,7 +17,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <section className="hidden md:flex rounded-2xl my-10 bg-slate-50 dark:bg-slate-900  ">
+    <Card className="hidden md:flex rounded-md    ">
       <div className="flex-col space-y-5 p-5 ">
         {data.map((value, index) => {
           return (
@@ -29,7 +30,7 @@ const Sidebar = () => {
           );
         })}
       </div>
-    </section>
+    </Card>
   );
 };
 
