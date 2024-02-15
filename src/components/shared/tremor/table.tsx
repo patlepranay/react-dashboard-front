@@ -28,11 +28,11 @@ type TableCompProps = {
 };
 
 const TableComp = ({ data, caption, header }: TableCompProps) => {
-  const [company, setCompany] = useState();
+  const [company, setCompany] = useState<serverSingleData>();
   const [selectedCompany, setSelectedCompany] = useState("");
 
   useEffect(() => {
-    setCompany(data.find((x) => x.name === selectedCompany));
+    setCompany(data.find((x: serverSingleData) => x.name === selectedCompany));
   }, [data]);
 
   return (
@@ -40,7 +40,7 @@ const TableComp = ({ data, caption, header }: TableCompProps) => {
       <Select
         onValueChange={(value) => {
           setSelectedCompany(value);
-          setCompany(data.find((x) => x.name === value));
+          setCompany(data.find((x: serverSingleData) => x.name === value));
         }}
       >
         <SelectTrigger className="w-full">
@@ -59,7 +59,6 @@ const TableComp = ({ data, caption, header }: TableCompProps) => {
           </SelectGroup>
         </SelectContent>
       </Select>
-
       <Table>
         <TableCaption>{caption}</TableCaption>
         <ScrollArea className="h-60 rounded-md border">
@@ -73,7 +72,7 @@ const TableComp = ({ data, caption, header }: TableCompProps) => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {company?.lastTenYearData.map((value, index) => (
+            {company?.lastTenYearData.map((value:lastTenYearData  , index:number) => (
               <TableRow key={index}>
                 <TableCell className="font-medium text-center">
                   {value.year}

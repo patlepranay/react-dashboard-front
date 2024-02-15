@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { io } from "socket.io-client";
 
 type Store = {
-  data: [];
+  data: serverSingleData[];
   isLoading: boolean;
   setDataManual: () => void;
 
@@ -10,7 +10,7 @@ type Store = {
   setMode: (value: "Manual" | "Auto") => void;
 };
 
-export const socket = io("http://localhost:5000", { autoConnect: false });
+export const socket = io("https://react-dashboard-back.onrender.com", { autoConnect: false });
 
 export const useDataStore = create<Store>()((set) => {
   const setDataAuto = () => {
@@ -34,7 +34,7 @@ export const useDataStore = create<Store>()((set) => {
     setDataManual: async () => {
       set({ isLoading: true });
       try {
-        const res = await fetch("http://localhost:5000/dashboard");
+        const res = await fetch("https://react-dashboard-back.onrender.com/dashboard");
         const data = await res.json();
         set({ data: data });
       } catch (error) {

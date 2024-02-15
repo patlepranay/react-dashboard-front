@@ -1,6 +1,6 @@
 import { useDataStore } from "@/lib/state";
 import { BarChart } from "@tremor/react";
-import React from "react";
+
 
 const BarChartComp = () => {
   const { data } = useDataStore();

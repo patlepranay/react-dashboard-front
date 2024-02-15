@@ -2,12 +2,11 @@ import { useDataStore } from "@/lib/state";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
+
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import React from "react";
+
 
 const Stats = () => {
   const { data } = useDataStore();

@@ -1,9 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 
 import Header from "./components/shared/header";
-import Sidebar from "./components/shared/sidebar";
 
-import Dashboard from "./components/shared/dashboard";
 import { useDataStore } from "./lib/state";
 import { useEffect } from "react";
 import TremorDashboard from "./components/shared/tremor-dashboard";
@@ -21,8 +19,7 @@ const App = () => {
           <Header />
         </div>
         <div className="flex lg:mx-10 my-4 gap-10 relative ">
-          {/* <Sidebar /> */}
-          {/* <Dashboard /> */}
+      
           <TremorDashboard />
         </div>
       </main>

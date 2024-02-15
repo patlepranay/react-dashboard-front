@@ -4,9 +4,7 @@ import { AreaChart } from "@tremor/react";
 const AreaChartComp = () => {
   const { data } = useDataStore();
 
-  const rotateX = {
-    angle: -90,
-  };
+
   return (
     <>
       <AreaChart
