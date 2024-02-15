@@ -1,6 +1,6 @@
 import { useDataStore } from "@/lib/state";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, DollarSign, DollarSignIcon, User } from "lucide-react";
+import { Building, DollarSign,  User } from "lucide-react";
 
 const Stats = () => {
   const { data } = useDataStore();
