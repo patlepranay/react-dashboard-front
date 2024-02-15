@@ -1,12 +1,6 @@
 import { useDataStore } from "@/lib/state";
-import {
-  Card,
-  CardContent,
-
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Building, DollarSign, DollarSignIcon, User } from "lucide-react";
 
 const Stats = () => {
   const { data } = useDataStore();
@@ -21,25 +15,29 @@ const Stats = () => {
   // console.log(data);
 
   return (
-    <div className="flex flex-col space-y-4 ">
-      <div className="flex flex-col sm:flex-row   gap-4">
-        <Card className="min-w-[280px]">
+    <>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 mb-4 ">
+        <Card className="">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-base font-medium text-muted-foreground">
               Companies Registered
             </CardTitle>
+            <Building />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold">{Math.floor(Math.random() * (100 - 10) + 10)}</div>
+            <div className="text-3xl font-bold">
+              {Math.floor(Math.random() * (100 - 10) + 10)}
+            </div>
             <p className="text-xs text-muted-foreground"></p>
           </CardContent>
         </Card>
 
-         <Card className="min-w-[280px]">
+        <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-base font-medium text-muted-foreground">
               Largest Profit Maker
             </CardTitle>
+            <User />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{highestProfitMaker?.name}</div>
@@ -47,12 +45,13 @@ const Stats = () => {
           </CardContent>
         </Card>
       </div>
-      <div className="flex flex-col sm:flex-row   gap-4">
-           <Card className="min-w-[280px]">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 mb-4 ">
+        <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-base font-medium text-muted-foreground">
               Average Profit
             </CardTitle>
+            <DollarSign />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{`$ ${averageProfit}`}</div>
@@ -60,11 +59,12 @@ const Stats = () => {
           </CardContent>
         </Card>
 
-          <Card className="min-w-[280px]">
+        <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-base font-medium text-muted-foreground">
-            Total Revenue Generated
+              Total Revenue Generated
             </CardTitle>
+            <DollarSign />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{`$ ${totalRevenue}`}</div>
@@ -72,7 +72,7 @@ const Stats = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </>
   );
 };
 

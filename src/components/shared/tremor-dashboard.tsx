@@ -10,12 +10,12 @@ const TremorDashboard = () => {
 
   return (
     <>
-      <div className="flex-col w-screen space-y-4">
-        <div className=" flex flex-col sm:flex-row  gap-4   w-full ">
+      <div className="flex-col  space-y-4">
+        <div className=" flex flex-col sm:flex-row  gap-4    ">
           <Card className="rounded-md">
             <AreaChartComp />
           </Card>
-          <Card className=" sm:w-full md:w-fit rounded-md">
+          <Card className="  rounded-md w-full md:w-fit">
             <TableComp
               data={data}
               caption="Company Profit(in Cr) of last 10 years"
@@ -24,9 +24,8 @@ const TremorDashboard = () => {
           </Card>
         </div>
 
-        <div className=" flex flex-col sm:flex-row  gap-4  justify-start
-          ">
-          <Card className="rounded-md  sm:w-full md:w-fit">
+        <div className=" flex flex-col sm:flex-row  gap-4 w-full">
+          <Card className="rounded-md ">
             <Stats />
           </Card>
           <Card className="rounded-md">

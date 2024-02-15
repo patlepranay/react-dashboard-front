@@ -14,12 +14,11 @@ const App = () => {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <main className="flex-col min-h-screen mx-5">
-        <div className="top-0 sticky z-50   ">
+      <main className="flex-col min-h-screen ">
+        <div className="top-0 sticky z-50 mx-2  ">
           <Header />
         </div>
-        <div className="flex lg:mx-10 my-4 gap-10 relative ">
-      
+        <div className=" lg:mx-10 my-4 gap-10 mx-4 ">
           <TremorDashboard />
         </div>
       </main>

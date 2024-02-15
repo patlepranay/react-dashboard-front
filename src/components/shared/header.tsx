@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" p-2 dark:bg-slate-950 bg-white">
+    <header className=" p-2 dark:bg-slate-950 bg-white w-full">
       <nav className="flex justify-between pb-2 ">
         <div className="flex gap-2 items-center">
           <Sunrise />
@@ -34,6 +34,7 @@ const Header = () => {
             size="icon"
             onClick={refreshHandler}
             disabled={mode == "Auto" || isLoading}
+            className="md:flex hidden "
           >
             <RefreshCw height={22} width={22} />
           </Button>
