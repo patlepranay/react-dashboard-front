@@ -28,8 +28,8 @@ const App = () => {
                   <Skeleton className="h-[50vh] md:w-[25%] w-[100%] rounded-xl" />
                 </div>
                 <div className="flex flex-col md:flex-row  gap-4 ">
-                  <Skeleton className="h-[50vh] md:w-[25%] w-[100%] rounded-xl" />
-                  <Skeleton className="h-[50vh] md:w-[75%] w-[100%] rounded-xl" />
+                  <Skeleton className="h-[50vh] md:w-[50%] w-[100%] rounded-xl" />
+                  <Skeleton className="h-[50vh] md:w-[50%] w-[100%] rounded-xl" />
                 </div>
              
               </div>
