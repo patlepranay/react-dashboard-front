@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./components/shared/header";
 
 import { useDataStore } from "./lib/state";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import TremorDashboard from "./components/shared/tremor-dashboard";
 import { Skeleton } from "./components/ui/skeleton";
 import { Card } from "./components/ui/card";
