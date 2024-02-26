@@ -26,7 +26,7 @@ const App = () => {
             "Our server decided to take a nap. Reviving the service will take about 1 minute.",
         });
       }
-    }, 500);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
